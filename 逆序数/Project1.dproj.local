@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/11/17 20:15:31.221,=D:\学\DELPHI学习\Unit3.pas</Transaction>
+    <Transaction>2019/11/17 20:17:42.472,D:\学\DELPHI学习\算法\逆序数\Reverse_Order.pas=D:\学\DELPHI学习\Unit3.pas</Transaction>
+    <Transaction>2019/11/17 20:17:42.472,D:\学\DELPHI学习\算法\逆序数\Reverse_Order.dfm=D:\学\DELPHI学习\Unit3.dfm</Transaction>
+    <Transaction>2019/11/17 20:17:46.053,D:\学\DELPHI学习\算法\逆序数\Project1.dproj=D:\学\DELPHI学习\Project1.dproj</Transaction>
+    <Transaction>2019/11/17 20:18:21.739,=D:\学\DELPHI学习\算法\逆序数\Unit1.pas</Transaction>
+    <Transaction>2019/11/17 20:18:40.868,D:\学\DELPHI学习\算法\逆序数\Main.pas=D:\学\DELPHI学习\算法\逆序数\Reverse_Order.pas</Transaction>
+    <Transaction>2019/11/17 20:18:40.868,D:\学\DELPHI学习\算法\逆序数\Main.dfm=D:\学\DELPHI学习\算法\逆序数\Reverse_Order.dfm</Transaction>
+    <Transaction>2019/11/17 20:19:08.983,D:\学\DELPHI学习\算法\逆序数\Reverse_Order.pas=D:\学\DELPHI学习\算法\逆序数\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

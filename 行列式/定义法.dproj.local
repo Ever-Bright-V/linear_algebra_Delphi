@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/11/17 16:22:37.000.559,=D:\学\DELPHI学习\Unit3.pas</Transaction>
+    <Transaction>2019/11/17 16:23:39.000.141,D:\学\DELPHI学习\Unit3.dfm=D:\学\DELPHI学习\算法\行列式\Definition_Method.dfm</Transaction>
+    <Transaction>2019/11/17 16:23:39.000.141,D:\学\DELPHI学习\Unit3.pas=D:\学\DELPHI学习\算法\行列式\Definition_Method.pas</Transaction>
+    <Transaction>2019/11/17 16:24:00.000.000,D:\学\DELPHI学习\Project1.dproj=D:\学\DELPHI学习\算法\行列式\定义法.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
