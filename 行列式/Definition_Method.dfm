@@ -15,7 +15,7 @@ object Form3: TForm3
   PixelsPerInch = 96
   TextHeight = 13
   object btn1: TButton
-    Left = 448
+    Left = 528
     Top = 288
     Width = 193
     Height = 25
@@ -46,17 +46,17 @@ object Form3: TForm3
     OnSetEditText = strngrd1SetEditText
   end
   object btn2: TButton
-    Left = 448
-    Top = 232
-    Width = 193
+    Left = 616
+    Top = 128
+    Width = 97
     Height = 25
     Caption = 'btn2'
     TabOrder = 2
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 472
-    Top = 160
+    Left = 736
+    Top = 87
     Width = 75
     Height = 25
     Caption = 'btn3'
@@ -64,20 +64,48 @@ object Form3: TForm3
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 624
-    Top = 120
+    Left = 736
+    Top = 56
     Width = 75
     Height = 25
     Caption = 'btn4'
     TabOrder = 4
   end
   object btn5: TButton
-    Left = 448
+    Left = 528
     Top = 56
     Width = 169
     Height = 25
-    Caption = 'btn5'
+    Caption = #27979#35797
     TabOrder = 5
     OnClick = btn5Click
+  end
+  object btn6: TButton
+    Left = 520
+    Top = 8
+    Width = 243
+    Height = 25
+    Caption = 'btn6'
+    TabOrder = 6
+    OnClick = btn6Click
+  end
+  object btn7: TButton
+    Left = 736
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'btn7'
+    TabOrder = 7
+    OnClick = btn7Click
+  end
+  object mmo1: TMemo
+    Left = 303
+    Top = 8
+    Width = 185
+    Height = 366
+    Lines.Strings = (
+      ''
+      '')
+    TabOrder = 8
   end
 end

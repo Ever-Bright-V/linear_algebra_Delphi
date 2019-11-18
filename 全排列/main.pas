@@ -11,7 +11,9 @@ type
   TForm7 = class(TForm)
     btn1: TButton;
     mmo1: TMemo;
+    btn2: TButton;
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,6 +39,27 @@ begin
   //Permint(AArray, 0, 2, ResultList);
   PermStr(AArray, 0, 2, ResultList);
   mmo1.Text := ResultList.Text;
+end;
+
+procedure TForm7.btn2Click(Sender: TObject);
+var
+  AArray: TArray<Integer>;
+  ResultList: Tstringlist;
+  ResultArray: PermResultIntArray;
+  X, Y: Integer;
+begin
+  ResultList := Tstringlist.create;
+  AArray := [1, 2, 3];
+  Permint(AArray, 0, 2, ResultList);
+  mmo1.Text := ResultList.Text;
+  PermListToArray(ResultList, ResultArray);
+  for X := Low(ResultArray) to High(ResultArray) do
+  begin
+    for Y := Low(ResultArray[X]) to High(ResultArray[X]) do
+    begin
+      mmo1.Lines.Add(Format('Array(%d,%d):%d', [X, Y, ResultArray[X, Y]]));
+    end;
+  end;
 end;
 
 end.

@@ -5,7 +5,12 @@ interface
 uses
   System.sysutils, System.Classes, System.Types;
 
-procedure PermInt(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer;  Result: TStringlist);
+type
+  PermResultIntArray = array of array of Integer;
+
+procedure PermListToArray(Result: TStringlist; var AArray: PermResultIntArray);
+
+procedure PermInt(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; Result: TStringlist);
 
 procedure PermStr(var AArray: TArray<string>; FrontP: Integer; LastP: Integer; Result: TStringlist);
 
@@ -15,7 +20,7 @@ procedure ArrElementExchage(var AArray: TArray<string>; Front: Integer; Last: In
 
 implementation
 
-procedure PermInt(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer;  Result: TStringlist);
+procedure PermInt(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; Result: TStringlist);
 var
   Num, Num1: Integer;
   Templist: Tstringlist;
@@ -88,6 +93,30 @@ begin
     PermStr(AArray, FrontP + 1, LastP, Result);
     ArrElementExchage(AArray, FrontP, Num);
   end;
+end;
+
+procedure PermListToArray(Result: TStringlist; var AArray: PermResultIntArray);
+var
+  OperateList: TStringList;
+  OrderNum: Integer;
+  Dimension: Integer;
+  Num1, Num2: Integer;
+begin
+  OperateList := TStringList.Create;
+  OrderNum := Result.Count;
+  OperateList.CommaText := Result[0];
+  Dimension := OperateList.Count;
+  SetLength(AArray, OrderNum, Dimension);
+  for Num1 := Low(AArray) to High(AArray) do
+  begin
+    OperateList.Clear;
+    OperateList.CommaText := Result[Num1];   //  获取 每一个 排列
+    for Num2 := Low(AArray[Num1]) to High(AArray[Num1]) do
+    begin
+      AArray[Num1, Num2] := StrToInt(OperateList[Num2]);
+    end;
+  end;
+  OperateList.Free;
 end;
 
 end.

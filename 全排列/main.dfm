@@ -30,4 +30,13 @@ object Form7: TForm7
     Align = alLeft
     TabOrder = 1
   end
+  object btn2: TButton
+    Left = 384
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'btn2'
+    TabOrder = 2
+    OnClick = btn2Click
+  end
 end

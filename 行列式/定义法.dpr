@@ -2,7 +2,9 @@ program ¶¨Òå·¨;
 
 uses
   Vcl.Forms,
-  Definition_Method in 'Definition_Method.pas' {Form3};
+  Definition_Method in 'Definition_Method.pas' {Form3},
+  Perm in 'Perm.pas',
+  Reverse_Order in 'Reverse_Order.pas';
 
 {$R *.res}
 

@@ -2,16 +2,16 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2019/11/17 09:57:22.000.914,=D:\学\DELPHI学习\Unit6.pas</Transaction>
-    <Transaction>2019/11/17 15:43:51.000.933,D:\学\DELPHI学习\Unit6.pas=D:\学\DELPHI学习\全排列\Permutation_全排列.pas</Transaction>
-    <Transaction>2019/11/17 15:43:51.000.933,D:\学\DELPHI学习\Unit6.dfm=D:\学\DELPHI学习\全排列\Permutation_全排列.dfm</Transaction>
-    <Transaction>2019/11/17 15:43:57.000.171,D:\学\DELPHI学习\Project2.dproj=D:\学\DELPHI学习\全排列\Project2.dproj</Transaction>
-    <Transaction>2019/11/17 16:09:14.000.501,D:\学\DELPHI学习\全排列\Perm_Demo.dproj=D:\学\DELPHI学习\全排列\Project2.dproj</Transaction>
+    <Transaction>2019/11/17 15:43:51.000.933,D:\学\DELPHI学习\全排列\Permutation_全排列.dfm=D:\学\DELPHI学习\Unit6.dfm</Transaction>
+    <Transaction>2019/11/17 15:43:51.000.933,D:\学\DELPHI学习\全排列\Permutation_全排列.pas=D:\学\DELPHI学习\Unit6.pas</Transaction>
+    <Transaction>2019/11/17 15:43:57.000.171,D:\学\DELPHI学习\全排列\Project2.dproj=D:\学\DELPHI学习\Project2.dproj</Transaction>
+    <Transaction>2019/11/17 16:09:14.000.501,D:\学\DELPHI学习\全排列\Project2.dproj=D:\学\DELPHI学习\全排列\Perm_Demo.dproj</Transaction>
     <Transaction>2019/11/17 20:56:57.000.683,=D:\学\DELPHI学习\算法\全排列\Unit1.pas</Transaction>
-    <Transaction>2019/11/17 21:07:41.000.909,D:\学\DELPHI学习\算法\全排列\Permutation_Release.pas=D:\学\DELPHI学习\算法\全排列\Unit1.pas</Transaction>
+    <Transaction>2019/11/17 21:07:41.000.909,D:\学\DELPHI学习\算法\全排列\Unit1.pas=D:\学\DELPHI学习\算法\全排列\Permutation_Release.pas</Transaction>
     <Transaction>2019/11/17 21:07:51.000.220,D:\学\DELPHI学习\算法\全排列\Permutation_Release.pas=</Transaction>
     <Transaction>2019/11/17 21:10:39.000.453,=D:\学\DELPHI学习\算法\全排列\Unit1.pas</Transaction>
     <Transaction>2019/11/17 21:10:47.000.136,=D:\学\DELPHI学习\算法\全排列\Unit1.pas</Transaction>
     <Transaction>2019/11/17 21:10:57.000.774,=D:\学\DELPHI学习\算法\全排列\Permutation_Release.pas</Transaction>
-    <Transaction>2019/11/18 15:10:20.000.177,D:\学\DELPHI学习\算法\全排列\Perm_Demo1.dproj=D:\学\DELPHI学习\算法\全排列\Perm_Demo.dproj</Transaction>
+    <Transaction>2019/11/18 15:10:20.000.177,D:\学\DELPHI学习\算法\全排列\Perm_Demo.dproj=D:\学\DELPHI学习\算法\全排列\Perm_Demo1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
