@@ -8,15 +8,22 @@ uses
 type
   TArrangeResult = array of TArray<Integer>;
 
+var
+  PublicList: TStringList;
+
 function JieChen(Num: Integer): Integer;
 
 function Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer): TArrangeResult; overload;
 
-procedure Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; var Result: TStringlist); overload;
+procedure Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; const Result: TStringlist); overload;
+
+//procedure Perm1(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer); overload;
 
 procedure ArrElementExchage(var AArray: TArray<Integer>; Front: Integer; Last: Integer); overload;
 
 procedure ArrElementExchage(var AArray: TArray<string>; Front: Integer; Last: Integer); overload;
+
+function GetResult: TStringList;
 
 implementation
 
@@ -105,7 +112,7 @@ begin
   end;
 end;
 
-procedure Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; var Result: TStringlist);
+procedure Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer; const Result: TStringlist);
 var
   Num, Num1: Integer;
   Templist: Tstringlist;
@@ -117,8 +124,7 @@ begin
     begin
       Templist.Add(AArray[Num1].ToString);
     end;
-    ShowMessage('²âÊÔ');
-    //Result.Add(Templist.CommaText);
+    Result.Add(Templist.CommaText);
     //Result.Add('scasadasasd');
     Templist.Destroy;
   end;
@@ -128,8 +134,38 @@ begin
     Perml(AArray, FrontP + 1, LastP, Result);
     ArrElementExchage(AArray, FrontP, Num);
   end;
-
 end;
+
+{procedure Perml(var AArray: TArray<Integer>; FrontP: Integer; LastP: Integer);
+var
+  Num, Num1: Integer;
+  Templist: Tstringlist;
+begin
+  if FrontP = LastP then
+  begin
+    Templist := TStringList.Create;
+    for Num1 := Low(AArray) to High(AArray) do  // È¡½á¹û
+    begin
+      Templist.Add(AArray[Num1].ToString);
+    end;
+    PublicList.Add(Templist.CommaText);
+    Templist.Destroy;
+  end;
+  for Num := FrontP to LastP do
+  begin
+    ArrElementExchage(AArray, FrontP, Num);
+    Perml(AArray, FrontP + 1, LastP);
+    ArrElementExchage(AArray, FrontP, Num);
+  end;
+end;  }
+
+function GetResult: TStringList;
+begin
+  Result := PublicList;
+end;
+
+initialization
+  PublicList := TStringList.Create;
 
 end.
 

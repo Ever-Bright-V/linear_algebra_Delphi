@@ -1,12 +1,10 @@
-unit Reverse_Order;
+﻿unit Reverse_Order;
 
 interface
 
 function ReverOrder(AArray: array of Integer): Integer;
 
 implementation
-//uses
- // System.SysUtils, Vcl.Dialogs;
 function ReverOrder(AArray: array of Integer): Integer;
 var
   Front: Integer;
@@ -19,13 +17,10 @@ begin
     begin
       if AArray[Front] > AArray[Num] then
       begin
-        //showmessage('ͷ' + IntToStr(AArray[Front]));
-        //showmessage('β' + IntToStr(AArray[Num]));
         Result := Result + 1;
       end;
     end;
   end;
 end;
-
 end.
 

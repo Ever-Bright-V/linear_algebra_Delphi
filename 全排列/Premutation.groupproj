@@ -6,7 +6,10 @@
         <Projects Include="Test.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Perm_Demo.dproj">
+        <Projects Include="Perm_Demo1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Perm_Test.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -26,23 +29,32 @@
     <Target Name="Test:Make">
         <MSBuild Projects="Test.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Perm_Demo">
-        <MSBuild Projects="Perm_Demo.dproj"/>
+    <Target Name="Perm_Demo1">
+        <MSBuild Projects="Perm_Demo1.dproj"/>
     </Target>
-    <Target Name="Perm_Demo:Clean">
-        <MSBuild Projects="Perm_Demo.dproj" Targets="Clean"/>
+    <Target Name="Perm_Demo1:Clean">
+        <MSBuild Projects="Perm_Demo1.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Perm_Demo:Make">
-        <MSBuild Projects="Perm_Demo.dproj" Targets="Make"/>
+    <Target Name="Perm_Demo1:Make">
+        <MSBuild Projects="Perm_Demo1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Perm_Test">
+        <MSBuild Projects="Perm_Test.dproj"/>
+    </Target>
+    <Target Name="Perm_Test:Clean">
+        <MSBuild Projects="Perm_Test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Perm_Test:Make">
+        <MSBuild Projects="Perm_Test.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="Test;Perm_Demo"/>
+        <CallTarget Targets="Test;Perm_Demo1;Perm_Test"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Test:Clean;Perm_Demo:Clean"/>
+        <CallTarget Targets="Test:Clean;Perm_Demo1:Clean;Perm_Test:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Test:Make;Perm_Demo:Make"/>
+        <CallTarget Targets="Test:Make;Perm_Demo1:Make;Perm_Test:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -179,6 +179,7 @@ var
 var
   Aarray: TArray<Integer>;
 begin
+  ResultList := Tstringlist.create;
   Aarray := [1, 2, 3];
   Perml(Aarray, 0, 2, ResultList);
   mmo1.Text := ResultList.Text;
