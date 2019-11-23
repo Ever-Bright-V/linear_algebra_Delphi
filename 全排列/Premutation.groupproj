@@ -12,6 +12,9 @@
         <Projects Include="Perm_Test.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\逆序数\Project1.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="Perm_Test:Make">
         <MSBuild Projects="Perm_Test.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="..\逆序数\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="..\逆序数\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="..\逆序数\Project1.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Test;Perm_Demo1;Perm_Test"/>
+        <CallTarget Targets="Test;Perm_Demo1;Perm_Test;Project1"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Test:Clean;Perm_Demo1:Clean;Perm_Test:Clean"/>
+        <CallTarget Targets="Test:Clean;Perm_Demo1:Clean;Perm_Test:Clean;Project1:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Test:Make;Perm_Demo1:Make;Perm_Test:Make"/>
+        <CallTarget Targets="Test:Make;Perm_Demo1:Make;Perm_Test:Make;Project1:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

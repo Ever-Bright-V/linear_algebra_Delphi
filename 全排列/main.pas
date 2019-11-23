@@ -30,7 +30,7 @@ implementation
 procedure TForm7.btn1Click(Sender: TObject);
 var
   //AArray: TArray<Integer>;
-  AArray: TArray<string>;   // 'array of' will be wrong
+  AArray: TStrArray;   // 'array of' will be wrong
   ResultList: Tstringlist;
 begin
   ResultList := Tstringlist.create;
@@ -43,7 +43,7 @@ end;
 
 procedure TForm7.btn2Click(Sender: TObject);
 var
-  AArray: TArray<Integer>;
+  AArray: TIntArray;
   ResultList: Tstringlist;
   ResultArray: PermResultIntArray;
   X, Y: Integer;

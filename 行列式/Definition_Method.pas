@@ -3,12 +3,9 @@ unit Definition_Method;
 interface
 
 uses
-  Reverse_Order, Perm, Winapi.Windows, Winapi.Messages, System.SysUtils,
-  System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms,
-  Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids, Vcl.ExtCtrls;
-
-type
-  TTDimIntArray = array of array of Integer;
+  Definition_Method_Det, Reverse_Order, Perm, Winapi.Windows, Winapi.Messages,
+  System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
+  Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids, Vcl.ExtCtrls;
 
 type
   TForm3 = class(TForm)
@@ -21,6 +18,8 @@ type
     btn6: TButton;
     btn7: TButton;
     mmo1: TMemo;
+    pnl1: TPanel;
+    Button1: TButton;
     procedure strngrd1DrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure strngrd1SetEditText(Sender: TObject; ACol, ARow: Integer; const Value: string);
     procedure btn1Click(Sender: TObject);
@@ -32,6 +31,7 @@ type
     procedure btn5Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -130,7 +130,6 @@ begin
     ToTal := ToTal + Sing1eTerm;
     SingleTermMUtiL := 1;
   end;
-
   ShowMessage(ToTal.ToString);
 end;
 
@@ -158,6 +157,15 @@ begin
       mmo1.Lines.Add(Format('Array(%d,%d):%d', [X, Y, BArray[X, Y]]));
     end;
   end;
+end;
+
+procedure TForm3.Button1Click(Sender: TObject);
+var
+  CalcuArray: TTDimIntArray;
+begin
+  GridToIntArray(strngrd1, CalcuArray);
+  ShowMessage(Define_Method(CalcuArray).ToString);
+
 end;
 
 procedure TForm3.FormCreate(Sender: TObject);
@@ -209,9 +217,7 @@ var
   CNum, RNum: Integer;
 begin
   GetDimension(Grid, Dimension);
-
   SetLength(IntArray, Dimension, Dimension);
-
   for CNum := 0 to Dimension - 1 do
   begin
     for RNum := 0 to Dimension - 1 do
