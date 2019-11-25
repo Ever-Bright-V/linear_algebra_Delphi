@@ -5,7 +5,8 @@ uses
   Definition_Method in 'Definition_Method.pas' {Form3},
   Perm in 'Perm.pas',
   Reverse_Order in 'Reverse_Order.pas',
-  Definition_Method_Det in 'Definition_Method_Det.pas';
+  Definition_Method_Det in 'Definition_Method_Det.pas',
+  Trangle_Method_Det in 'Trangle_Method_Det.pas';
 
 {$R *.res}
 

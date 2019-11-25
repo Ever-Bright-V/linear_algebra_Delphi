@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Form3'
   ClientHeight = 382
-  ClientWidth = 481
+  ClientWidth = 752
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -101,25 +101,54 @@ object Form3: TForm3
     Visible = False
   end
   object pnl1: TPanel
-    Left = 296
+    Left = 297
     Top = 0
-    Width = 185
+    Width = 455
     Height = 382
-    Align = alRight
+    Align = alClient
     TabOrder = 9
+    ExplicitLeft = 257
+    ExplicitTop = -221
+    object StringGrid1: TStringGrid
+      Left = 144
+      Top = 1
+      Width = 310
+      Height = 380
+      Align = alRight
+      DefaultRowHeight = 64
+      TabOrder = 3
+    end
     object Button1: TButton
-      Left = 56
-      Top = 105
+      Left = 31
+      Top = 118
       Width = 89
       Height = 25
       Caption = #23553#35013#27979#35797
       TabOrder = 0
       OnClick = Button1Click
     end
+    object Button2: TButton
+      Left = 31
+      Top = 167
+      Width = 89
+      Height = 25
+      Caption = #19979#19977#35282#27979#35797
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 31
+      Top = 208
+      Width = 89
+      Height = 25
+      Caption = #19979#19977#35282#27979#35797'2'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
   end
   object btn5: TButton
-    Left = 350
-    Top = 31
+    Left = 328
+    Top = 80
     Width = 93
     Height = 25
     Caption = #35745#31639

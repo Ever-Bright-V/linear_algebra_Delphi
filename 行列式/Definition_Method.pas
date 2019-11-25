@@ -3,9 +3,10 @@ unit Definition_Method;
 interface
 
 uses
-  Definition_Method_Det, Reverse_Order, Perm, Winapi.Windows, Winapi.Messages,
-  System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
-  Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids, Vcl.ExtCtrls;
+  Trangle_Method_Det, Definition_Method_Det, Reverse_Order, Perm, Winapi.Windows,
+  Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.ExtCtrls;
 
 type
   TForm3 = class(TForm)
@@ -20,6 +21,9 @@ type
     mmo1: TMemo;
     pnl1: TPanel;
     Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    StringGrid1: TStringGrid;
     procedure strngrd1DrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure strngrd1SetEditText(Sender: TObject; ACol, ARow: Integer; const Value: string);
     procedure btn1Click(Sender: TObject);
@@ -32,13 +36,16 @@ type
     procedure btn6Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-    procedure GridToIntArray(Grid: TStringGrid; var IntArray: TTDimIntArray);
+
     procedure GetMaxCol_Row(Grid: TStringGrid; var ColNum: Integer; var RowNum: Integer);
     procedure GetDimension(Grid: TStringGrid; var Dimension: Integer);
+    procedure GridToIntArray(Grid: TStringGrid; var IntArray: TTDimIntArray);
   end;
 
 var
@@ -165,7 +172,33 @@ var
 begin
   GridToIntArray(strngrd1, CalcuArray);
   ShowMessage(Define_Method(CalcuArray).ToString);
+end;
 
+procedure TForm3.Button2Click(Sender: TObject);
+var
+  CalcuArray: TTDimIntArray;
+  //CalArray: TDimIntArray;
+begin
+  GridToIntArray(strngrd1, CalcuArray);
+  ShowMessage(Trangle_Method(TDimIntArray(CalcuArray)).ToString);
+end;
+
+procedure TForm3.Button3Click(Sender: TObject);
+var
+  CalcuArray: TTDimIntArray;
+  ResultArray: TTransResultRealArray;
+  ColNum, RowNum: Integer;
+begin
+  GridToIntArray(strngrd1, CalcuArray);
+  ShowMessage(Trangle_Method(TDimIntArray(CalcuArray), ResultArray).ToString);
+  for RowNum := Low(ResultArray) to High(ResultArray) do
+  begin
+    for ColNum := Low(ResultArray[0]) to High(ResultArray[0]) do
+    begin
+      //StringGrid1.Cells[ColNum + 1, RowNum + 1] := FloatToStr(ResultArray[ColNum, RowNum]);
+      StringGrid1.Cells[ColNum + 1, RowNum + 1] := FloatToStr(Round(ResultArray[ColNum, RowNum] * 100) / 100);
+    end;
+  end;
 end;
 
 procedure TForm3.FormCreate(Sender: TObject);
@@ -173,6 +206,8 @@ begin
   strngrd1.ColWidths[0] := 30;
   strngrd1.RowHeights[0] := 30;
   strngrd1.Brush.Color := clWhite;
+  StringGrid1.ColWidths[0] := 30;
+  StringGrid1.RowHeights[0] := 30;
 end;
 
 procedure TForm3.GetDimension(Grid: TStringGrid; var Dimension: Integer);
@@ -216,7 +251,7 @@ var
   Dimension: Integer;
   CNum, RNum: Integer;
 begin
-  GetDimension(Grid, Dimension);
+  Self.GetDimension(Grid, Dimension);
   SetLength(IntArray, Dimension, Dimension);
   for CNum := 0 to Dimension - 1 do
   begin
