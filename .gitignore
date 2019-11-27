@@ -8,4 +8,6 @@
 */*.tvsconfig
 */*.identcache
 行列式/Trangle_Method_Det_Test.pas
+行列式/Expansion_Method_Det2.pas
+行列式/Expansion_Test.pas
 
